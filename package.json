@@ -1,7 +1,12 @@
 {
-  "name": "hexo-theme-zen",
+  "name": "hexo-theme-chan",
   "version": "0.0.1",
-  "private": true,
+  "description": "A simple theme for hexo",
+  "license": "MIT",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/denjones/hexo-theme-chan.git"
+  },
   "devDependencies": {
   }
 }

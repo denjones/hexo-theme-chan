@@ -1,0 +1,42 @@
+<div class="sidebar">
+  <div class="header">
+    <h1 class="title"><a href="/"><%= config.title %></a></h1>
+    <% if (config.subtitle) { %>
+      <p class="subtitle">
+        <%= config.subtitle %>
+      </p>
+    <% } %>
+    <% if (theme.avatar) { %>
+      <div class="avatar">
+        <% if (theme.avatarLink) { %>
+          <a href="<%= theme.avatarLink %>"><img src="<%= theme.avatar %>"></a>
+        <% } else { %>
+          <img src="<%= theme.avatar %>">
+        <% } %>
+      </div>
+    <% } %>
+  </div>
+  <div class="body">
+    <ul class="nav">
+      <li class="category-list-container">
+        <a href="javascript:;">分类</a>
+        <%- list_categories({}) %>
+      </li>
+
+      <li class="tag-list-container">
+        <a href="javascript:;">标签</a>
+        <%- list_tags({}) %>
+      </li>
+    </ul>
+
+    <ul class="nav">
+      <% theme.nav.forEach(function(item){ %>
+        <li>
+          <a href="<%= item.url %>">
+            <%= item.name %>
+          </a>
+        </li>
+      <% }) %>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+# chan theme configuration
+
+# style setting
+monochrome: true
+
+# view setting
+avatar: '/images/1.jpg'
+avatarLink: '/about'
+
+nav:
+  -
+    name: 首页
+    url: '/'
+  -
+    name: 归档
+    url: '/archives'
+
+# duoshuo comment
+duoshuo: sprabbit
+jiathis: 1589291

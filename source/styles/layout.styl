@@ -1,0 +1,47 @@
+// main layout
+
+html, body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-family: '微软雅黑', '黑体', sans-serif;
+  color: #333;
+}
+
+.main-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.main-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 400px;
+  bottom: 0;
+  height: 100%;
+  padding: 20px 40px;
+  overflow: auto;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+@media mq-mobile {
+  .main-container {
+    top: 45px;
+    left: 0px;
+    bottom: 0;
+    height: auto;
+  }
+  .main-content {
+    left: 0;
+    bottom: 0;
+    height: auto;
+    padding: 10px 10px;
+  }
+}

@@ -1,0 +1,44 @@
+
+<% var last; %>
+
+<% page.posts.each(function(post, i){ %>
+  <% var year = post.date.year(); %>
+  <% if (last != year){ %>
+    <% if (last != null){ %>
+      </ul></section>
+    <% } %>
+    <% last = year; %>
+    <section class="archives-wrap">
+      <div class="archive-year-wrap">
+        <h1><a href="<%- url_for('archives/' + year) %>" class="archive-year"><%= year %></a></h1>
+      </div>
+      <ul class="post-list">
+  <% } %>
+
+  <li class="post-list-item article">
+    <h3 class="article-header">
+      <a href="<%- url_for(post.path) %>">
+        <%= post.title %>
+      </a>
+    </h3>
+    <div class="article-info">
+      <%- partial('_partials/post/date', {post: post}) %>
+      <%- partial('_partials/post/tag', {post: post}) %>
+      <%- partial('_partials/post/category', {post: post}) %>
+    </div>
+    <div class="article-entry">
+      <% if (post.excerpt) { %>
+        <%- post.excerpt %>
+        <p>
+          <a href="<%- url_for(post.path) %>">
+            阅读全文
+          </a>
+        </p>
+      <% } else { %>
+        <%- post.content %>
+      <% } %>
+    </div>
+  </li>
+<% }) %>
+
+<%- partial('_partials/pagination') %>

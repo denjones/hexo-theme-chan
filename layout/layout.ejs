@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%- partial('_partials/head') %>
+</head>
+<body
+  <% if (theme.monochrome) { %>
+    class="monochrome"
+  <% } %>
+  >
+  <%- partial('_partials/mobile-header') %>
+  <div class="main-container">
+    <%- partial('_partials/sidebar') %>
+    <div class="main-content">
+      <%- body %>
+    </div>
+  </div>
+  <%- partial('_partials/scripts') %>
+</body>
+</html>

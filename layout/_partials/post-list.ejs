@@ -1,0 +1,30 @@
+<ul class="post-list">
+  <% page.posts.each(function(post){ %>
+    <li class="post-list-item article">
+      <h3 class="article-header">
+        <a href="<%- url_for(post.path) %>">
+          <%= post.title %>
+        </a>
+      </h3>
+      <div class="article-info">
+        <%- partial('_partials/post/date', {post: post}) %>
+        <%- partial('_partials/post/tag', {post: post}) %>
+        <%- partial('_partials/post/category', {post: post}) %>
+      </div>
+      <div class="article-entry">
+        <% if (post.excerpt) { %>
+          <%- post.excerpt %>
+          <p>
+            <a href="<%- url_for(post.path) %>">
+              阅读全文
+            </a>
+          </p>
+        <% } else { %>
+          <%- post.content %>
+        <% } %>
+      </div>
+    </li>
+  <% }) %>
+</ul>
+
+<%- partial('_partials/pagination') %>

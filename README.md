@@ -1,2 +1,2 @@
-# hexo-theme-zen
+# hexo-theme-chan
 a simple theme for hexo
