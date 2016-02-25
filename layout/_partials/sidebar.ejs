@@ -17,26 +17,33 @@
     <% } %>
   </div>
   <div class="body">
-    <ul class="nav">
-      <li class="category-list-container">
-        <a href="javascript:;">分类</a>
-        <%- list_categories({}) %>
-      </li>
-
-      <li class="tag-list-container">
-        <a href="javascript:;">标签</a>
-        <%- list_tags({}) %>
-      </li>
-    </ul>
-
-    <ul class="nav">
-      <% theme.nav.forEach(function(item){ %>
-        <li>
-          <a href="<%= item.url %>">
-            <%= item.name %>
-          </a>
-        </li>
-      <% }) %>
-    </ul>
+    <% if (theme.nav && theme.nav.length) { %>
+      <% theme.nav.forEach(function(list) { %>
+        <ul class="nav">
+          <% list.forEach(function(item){ %>
+            <% if (item === 'categories') { %>
+              <li class="category-list-container">
+                <a href="javascript:;"><%- __('category') %></a>
+                <%- list_categories({}) %>
+              </li>
+            <% } else if (item === 'tags') { %>
+              <li class="tag-list-container">
+                <a href="javascript:;"><%- __('tag') %></a>
+                <%- list_tags({}) %>
+              </li>
+            <% } else if (item === 'archives') { %>
+              <li class="archive-list-container">
+                <a href="javascript:;"><%- __('archive') %></a>
+                <%- list_archives({type: 'yearly'}) %>
+              </li>
+            <% } else { %>
+              <li>
+                <%- link_to(item.url, item.name, {external: item.url.indexOf('http') === 0}) %>
+              </li>
+            <% } %>
+          <% }) %>
+        </ul>
+      <% }); %>
+    <% } %>
   </div>
 </div>

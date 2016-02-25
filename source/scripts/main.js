@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  $('.category-list-container > a, .tag-list-container > a').click(function(e){
+  $('.category-list-container > a, .tag-list-container > a, .archive-list-container > a').click(function(e){
     $(this).next().slideToggle('fast');
   });
 

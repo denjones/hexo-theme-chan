@@ -4,16 +4,16 @@
 <%
   var title = page.title;
   if (is_archive()){
-    title = '归档';
+    title = __('archive');
     if (is_month()){
       title += ': ' + page.year + '/' + page.month;
     } else if (is_year()){
       title += ': ' + page.year;
     }
   } else if (is_category()){
-    title = '分类: ' + page.category;
+    title = __('category') + ': ' + page.category;
   } else if (is_tag()){
-    title = '标签: ' + page.tag;
+    title = __('tag') + ': ' + page.tag;
   }
 %>
 <title>

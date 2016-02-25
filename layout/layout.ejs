@@ -12,7 +12,14 @@
   <div class="main-container">
     <%- partial('_partials/sidebar') %>
     <div class="main-content">
-      <%- body %>
+      <% if (theme.maxContentWidth) { %>
+        <div style="max-width: <%= theme.maxContentWidth %>">
+      <% } %>
+          <%- body %>
+          <%- partial('_partials/footer') %>
+      <% if (theme.maxContentWidth) { %>
+        </div>
+      <% } %>
     </div>
   </div>
   <%- partial('_partials/scripts') %>

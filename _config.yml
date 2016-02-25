@@ -4,17 +4,48 @@
 monochrome: true
 
 # view setting
-avatar: '/images/1.jpg'
-avatarLink: '/about'
+avatar: /images/1.jpg
+avatarLink: /about
+maxContentWidth: 1000px # set the main content column's max-width property. keep it blank to unlimited the width
+copyright: # the copyright text in the footer, could be richtext
 
+# sidebar navigator structure
+# It's a list with item that is also list.
+# The item of first level list means a group of links,
+# and the item of the second level list means exactly a link.
+# A link item is an object whit two properties: 'name' for displaying and 'link' for redirecting.
+# A link starts with http/https would be rendered as a tag with 'target="_blank"' .
+# There are also some special link items representing in string: 'categories', 'tags' and 'archives'
 nav:
   -
-    name: 首页
-    url: '/'
+    - categories # display a collapsible category list
+    - tags       # display a collapsible tag list
+    - archives   # display a collapsible archive list
   -
-    name: 归档
-    url: '/archives'
+    -
+      name: 首页
+      url: '/'
+    -
+      name: 年份
+      url: /archives
+  -
+    -
+      name: 关于
+      url: /about
+    -
+      name: Chan
+      url: https://github.com/denjones/hexo-theme-chan
+    -
+      name: Github
+      url: https://github.com/denjones
+    -
+      name: RSS
+      url: /atom.xml
 
-# duoshuo comment
+# duoshuo shortname
+# refer to http://duoshuo.com
 duoshuo: sprabbit
+
+# jiathis share id
+# refer to http://jiathis.com
 jiathis: 1589291
