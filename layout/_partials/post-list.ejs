@@ -24,8 +24,8 @@
       <%- partial('post/gallery', {post: post}) %>
       <div class="article-info">
         <a href="<%- url_for(post.path) %>"><%- partial('_partials/post/date', {post: post}) %></a>
-        <%- partial('_partials/post/tag', {post: post}) %>
         <%- partial('_partials/post/category', {post: post}) %>
+        <%- partial('_partials/post/tag', {post: post}) %>
       </div>
       <div class="article-entry">
         <% if (post.excerpt) { %>
