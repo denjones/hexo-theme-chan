@@ -6,15 +6,25 @@
         <%= config.subtitle %>
       </p>
     <% } %>
-    <% if (theme.avatar) { %>
-      <div class="avatar">
-        <% if (theme.avatarLink) { %>
-          <a href="<%= theme.avatarLink %>"><img src="<%= theme.avatar %>"></a>
-        <% } else { %>
-          <img src="<%= theme.avatar %>">
+    <div class="info">
+      <div class="content">
+        <% if (config.description) { %>
+          <div class="description"><%= config.description %></div>
+        <% } %>
+        <% if (config.author) { %>
+          <div class="author"><%= config.author %></div>
         <% } %>
       </div>
-    <% } %>
+      <% if (theme.avatar) { %>
+        <div class="avatar">
+          <% if (theme.avatarLink) { %>
+            <a href="<%= theme.avatarLink %>"><img src="<%= theme.avatar %>"></a>
+          <% } else { %>
+            <img src="<%= theme.avatar %>">
+          <% } %>
+        </div>
+      <% } %>
+    </div>
   </div>
   <div class="body">
     <% if (theme.nav && theme.nav.length) { %>
@@ -24,7 +34,7 @@
             <% if (item === 'categories') { %>
               <li class="category-list-container">
                 <a href="javascript:;"><%- __('category') %></a>
-                <%- list_categories({}) %>
+                <%- list_categories({depth: -1}) %>
               </li>
             <% } else if (item === 'tags') { %>
               <li class="tag-list-container">

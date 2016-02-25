@@ -1,15 +1,31 @@
-<ul class="post-list">
-  <% page.posts.each(function(post){ %>
-    <li class="post-list-item article">
+<% var last; %>
+<% page.posts.each(function(post){ %>
+  <% var year = post.date.year(); %>
+  <% if (is_archive()) { %>
+    <% if (last != year){ %>
+      <% if (last != null){ %>
+        </div></section>
+      <% } %>
+      <% last = year; %>
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <h1><a href="<%- url_for('archives/' + year) %>" class="archive-year"><%= year %></a></h1>
+        </div>
+        <div class="post-list">
+    <% } %>
+  <% } else { %>
+    <div class="post-list">
+  <% } %>
+
+    <div class="post-list-item article">
       <h3 class="article-header">
-        <a href="<%- url_for(post.path) %>">
-          <%= post.title %>
-        </a>
+        <%- partial('_partials/post/title', {post: post}) %>
       </h3>
+      <%- partial('post/gallery', {post: post}) %>
       <div class="article-info">
-        <%- partial('_partials/post/date', {post: post}) %>
-        <%- partial('_partials/post/category', {post: post}) %>
+        <a href="<%- url_for(post.path) %>"><%- partial('_partials/post/date', {post: post}) %></a>
         <%- partial('_partials/post/tag', {post: post}) %>
+        <%- partial('_partials/post/category', {post: post}) %>
       </div>
       <div class="article-entry">
         <% if (post.excerpt) { %>
@@ -23,8 +39,11 @@
           <%- post.content %>
         <% } %>
       </div>
-    </li>
-  <% }) %>
-</ul>
+    </div>
+
+  <% if (!is_archive()) { %>
+    </div>
+  <% } %>
+<% }) %>
 
 <%- partial('_partials/pagination') %>

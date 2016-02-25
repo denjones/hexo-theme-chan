@@ -29,7 +29,21 @@
     margin-bottom: 30px;
   }
 
+  .info {
+    display: table;
+    width: 100%;
+    & > * {
+      display: table-cell;
+      vertical-align: bottom;
+    }
+  }
+
+  .description {
+    font-size: 13px;
+  }
+
   .avatar {
+    width: 140px;
     img {
       width: 120px;
       height: 120px;
