@@ -1,0 +1,29 @@
+<%
+  var cc = post.cc || theme.cc;
+  var language = config.language;
+  language = language && language.length ? language[0] : language;
+  if (cc && cc !== 'none') {
+    var ccList = cc.split('-');
+%>
+  <div class="cc">
+    <a href="http://creativecommons.org/licenses/<%= cc %>/4.0/deed.<%= language && language.replace('-', '_') || 'en' %>" target="_blank" title="<%- __('cc.' + cc) %>">
+      <img src="/images/cc/cc.png">
+      <%
+        ccList.forEach(function(item) {
+          item = item.toLowerCase();
+          if (item === 'by') {
+      %>
+          <img src="/images/cc/by.png">
+        <% } else if (item === 'nc') { %>
+          <img src="/images/cc/nc.png">
+        <% } else if (item === 'nd') { %>
+          <img src="/images/cc/nd.png">
+        <% } else if (item === 'sa') { %>
+          <img src="/images/cc/sa.png">
+      <% }}); %>
+      <span>
+        <%- _p('cc.hint', __('cc.' + cc)) %>
+      </span>
+    </a>
+  </div>
+<% } %>

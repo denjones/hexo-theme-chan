@@ -1,6 +1,14 @@
 more: 閱讀全文
-category: 分類
+category: 類別
 tag: 標籤
-archive: 歸檔
+archive: 檔案
 prev: 上一頁
 next: 下一頁
+cc:
+  hint: 本著作係採用創用 CC %s 4.0 國際 授權條款授權.
+  by: 姓名標示
+  by-sa: 姓名標示-相同方式分享
+  by-nd: 姓名標示-禁止改作
+  by-nc: 姓名標示-非商業性
+  by-nc-sa: 姓名標示-非商業性-相同方式分享
+  by-nc-nd: 姓名標示-非商業性-禁止改作

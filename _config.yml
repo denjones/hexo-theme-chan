@@ -1,10 +1,14 @@
 # chan theme configuration
 
+# site setting
+rss: /atom.xml
+favicon: /favicon.png
+
 # style setting
 monochrome: true
 
 # view setting
-avatar: /images/1.jpg
+avatar: https://cn.gravatar.com/avatar/35fef74d731255cd569c2c2b0b9e87e4?s=200
 avatarLink: /about
 maxContentWidth: 1000px # set the main content column's max-width property. keep it blank to unlimited the width
 copyright: # the copyright text in the footer, could be richtext
@@ -44,8 +48,31 @@ nav:
 
 # duoshuo shortname
 # refer to http://duoshuo.com
+# If you use disqus then you should set disqus_shortname in your site config and disable duoshuo here.
 duoshuo: sprabbit
 
 # jiathis share id
 # refer to http://jiathis.com
 jiathis: 1589291
+
+# open graph
+twitter:
+google_plus:
+fb_admins:
+fb_app_id:
+
+# analytics
+google_analytics:
+baidu_statistics: d98dab13c098e2a1f6439b963347ad32
+
+# default creative commons
+# There are 6 kinds of combination
+# - by
+# - by-sa
+# - by-nd
+# - by-nc
+# - by-nc-sa
+# - by-nc-nd
+# This setting could be overwritten in the front matter of a post.
+# More details in https://creativecommons.org
+cc: by-sa

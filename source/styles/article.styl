@@ -76,18 +76,34 @@
       }
     }
   }
-  img{
+  img {
     max-width: 100%;
   }
   .article-footer {
     margin-top: 30px;
+    .cc {
+      margin-bottom: 20px;
+      img {
+        display: inline-block;
+        height: 1em;
+        vertical-align: bottom;
+      }
+      span {
+        color: gray;
+        font-size: 0.8em;
+        margin-left: 0.5em;
+        vertical-align: bottom;
+      }
+    }
   }
 }
 
 @media mq-mobile {
-  .highlight,
-  .gist {
-    max-width: 100%;
-    margin: 0 !important;
+  .article .article-entry {
+    .highlight,
+    .gist {
+      max-width: 100%;
+      margin: 0 !important;
+    }
   }
 }
