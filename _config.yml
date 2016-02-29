@@ -27,14 +27,14 @@ nav:
     - archives   # display a collapsible archive list
   -
     -
-      name: 首页
+      name: Homepage
       url: '/'
     -
-      name: 年份
+      name: By Year
       url: /archives
   -
     -
-      name: 关于
+      name: About
       url: /about
     -
       name: Chan
@@ -49,11 +49,12 @@ nav:
 # duoshuo shortname
 # refer to http://duoshuo.com
 # If you use disqus then you should set disqus_shortname in your site config and disable duoshuo here.
-duoshuo: sprabbit
+# You also need to set 'comments' to true in the front-matter
+#duoshuo: sprabbit
 
 # jiathis share id
 # refer to http://jiathis.com
-jiathis: 1589291
+#jiathis: 1589291
 
 # open graph
 twitter:
@@ -81,5 +82,5 @@ cc: by-sa
 # FancyBox / PhotoSwipe
 # Although it is called fancybox, we use PhotoSwipe instead.
 # Check http://photoswipe.com
-fancybox: true    # enable fancybox tag
-photoswipe: true  # enable photoswipe tag
+fancybox: true    # enable fancybox/photoswipe rendering
+# photoswipe: true  # the same
