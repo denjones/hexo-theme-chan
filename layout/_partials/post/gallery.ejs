@@ -1,11 +1,21 @@
 <% if (post.photos && post.photos.length){ %>
-  <div class="article-gallery">
-    <div class="article-gallery-photos">
-      <% post.photos.forEach(function(photo, i){ %>
-        <a class="article-gallery-img fancybox" href="<%- url_for(photo) %>" rel="gallery_<%= post._id %>">
-          <img src="<%- url_for(photo) %>" itemprop="image">
+  <div class="article-gallery article-gallery-photos" itemscope itemtype="http://schema.org/ImageGallery">
+    <% post.photos.forEach(function(photo, i){
+        var photoInfo = post.photoInfos && post.photoInfos[i];
+      %>
+      <figure class="article-gallery-img" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="<%- url_for(photo) %>"
+          itemprop="contentUrl"
+          rel="gallery_<%= post._id %>"
+          title="<%= photoInfo ? photoInfo.caption : '' %>"
+          <% if (photoInfo && photoInfo.width && photoInfo.height) { %>
+            data-size="<%= photoInfo.width + 'x' + photoInfo.height %>"
+          <% } %>
+          style="background-image: url(<%- url_for(photo) %>)">
+          <img src="<%- url_for(photo) %>" itemprop="thumbnail" alt="<%= photoInfo ? photoInfo.caption : '' %>"/>
         </a>
-      <% }) %>
-    </div>
+        <figcaption itemprop="caption description"><%= photoInfo ? photoInfo.caption : '' %></figcaption>
+      </figure>
+    <% }) %>
   </div>
 <% } %>

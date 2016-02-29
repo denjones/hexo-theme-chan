@@ -66,13 +66,20 @@ google_analytics:
 baidu_statistics: d98dab13c098e2a1f6439b963347ad32
 
 # default creative commons
-# There are 6 kinds of combination
+# There are 6 kinds of combination and place 'none' to disable.
 # - by
 # - by-sa
 # - by-nd
 # - by-nc
 # - by-nc-sa
 # - by-nc-nd
+# - none
 # This setting could be overwritten in the front matter of a post.
 # More details in https://creativecommons.org
 cc: by-sa
+
+# FancyBox / PhotoSwipe
+# Although it is called fancybox, we use PhotoSwipe instead.
+# Check http://photoswipe.com
+fancybox: true    # enable fancybox tag
+photoswipe: true  # enable photoswipe tag

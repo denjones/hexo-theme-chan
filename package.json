@@ -4,9 +4,9 @@
   "description": "A simple theme for hexo",
   "license": "MIT",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/denjones/hexo-theme-chan.git"
+    "type": "git",
+    "url": "https://github.com/denjones/hexo-theme-chan.git"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {},
+  "dependencies": {}
 }
