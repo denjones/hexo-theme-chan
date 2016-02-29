@@ -95,7 +95,6 @@
       // triggers when user clicks on thumbnail
       var onThumbnailsClick = function(e) {
         e = e || window.event;
-        e.preventDefault ? e.preventDefault() : e.returnValue = false;
 
         var eTarget = e.target || e.srcElement;
 
@@ -106,6 +105,12 @@
 
         if (!clickedListItem) {
           return;
+        }
+
+        if (e.preventDefault) {
+          e.preventDefault();
+        } else {
+          e.returnValue = false;
         }
 
         // find index of clicked item by looping through all child nodes
