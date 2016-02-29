@@ -14,10 +14,10 @@
     <%- post.content %>
   </div>
   <footer class="article-footer">
-    <%- partial('post/cc') %>
-    <%- partial('post/jiathis') %>
+    <%- partial('post/cc', {}, {cache: true}) %>
+    <%- partial('post/jiathis', {}, {cache: true}) %>
   </footer>
 </article>
 
-<%- partial('post/duoshuo') %>
-<%- partial('post/disqus') %>
+<%- partial('post/duoshuo', {}, {cache: true}) %>
+<%- partial('post/disqus', {}, {cache: true}) %>

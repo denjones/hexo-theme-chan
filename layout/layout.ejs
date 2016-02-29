@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <%- partial('_partials/head') %>
+  <%- partial('_partials/head', {}, {cache: true}) %>
 </head>
 <body
   <% if (theme.monochrome) { %>
     class="monochrome"
   <% } %>
   >
-  <%- partial('_partials/mobile-header') %>
+  <%- partial('_partials/mobile-header', {}, {cache: true}) %>
   <div class="main-container">
-    <%- partial('_partials/sidebar') %>
+    <%- partial('_partials/sidebar', {}, {cache: true}) %>
     <div class="main-content">
       <% if (theme.maxContentWidth) { %>
         <div style="max-width: <%= theme.maxContentWidth %>">
       <% } %>
           <%- body %>
-          <%- partial('_partials/footer') %>
+          <%- partial('_partials/footer', {}, {cache: true}) %>
       <% if (theme.maxContentWidth) { %>
         </div>
       <% } %>
     </div>
   </div>
-  <%- partial('_partials/scripts') %>
+  <%- partial('_partials/scripts', {}, {cache: true}) %>
 </body>
 </html>
