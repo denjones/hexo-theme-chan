@@ -34,9 +34,6 @@ nav:
       url: /archives
   -
     -
-      name: About
-      url: /about
-    -
       name: Chan
       url: https://github.com/denjones/hexo-theme-chan
     -
@@ -62,9 +59,9 @@ google_plus:
 fb_admins:
 fb_app_id:
 
-# analytics
+# analytics ids
 google_analytics:
-baidu_statistics: d98dab13c098e2a1f6439b963347ad32
+baidu_statistics:
 
 # default creative commons
 # There are 6 kinds of combination and place 'none' to disable.

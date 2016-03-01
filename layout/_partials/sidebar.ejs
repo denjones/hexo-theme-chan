@@ -1,6 +1,6 @@
 <div class="sidebar">
   <div class="header">
-    <h1 class="title"><a href="/"><%= config.title %></a></h1>
+    <h1 class="title"><a href="<%- url_for('/') %>"><%= config.title %></a></h1>
     <% if (config.subtitle) { %>
       <p class="subtitle">
         <%= config.subtitle %>

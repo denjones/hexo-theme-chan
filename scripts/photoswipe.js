@@ -26,7 +26,8 @@ function testUrl(url) {
   return RegExp(regex, 'ig').test(url) || RegExp(regex2, 'ig').test(url);
 }
 
-var photoswipe = function(args) {
+var photoswipe = function(args, content) {
+ var url_for = hexo.extend.helper.get('url_for').bind(hexo);
   var original = args.shift(),
     thumbnail = '',
     width,
@@ -45,8 +46,8 @@ var photoswipe = function(args) {
 
   return (
     '<figure class="article-gallery-img" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">' +
-      '<a href="' + original + '" title="' + title + '"' + ((width && height) ? 'data-size="' + width + 'x' + height + '"' : '') + '>' +
-        '<img src="' + (thumbnail || original) + '" alt="' + title + '">' +
+      '<a href="' + url_for(original) + '" title="' + title + '"' + ((width && height) ? 'data-size="' + width + 'x' + height + '"' : '') + '>' +
+        '<img src="' + (url_for(thumbnail || original)) + '" alt="' + title + '">' +
       '</a>' +
       '<figcaption class="caption">' + (title || '') + '</figcaption>' +
     '</figure>'
