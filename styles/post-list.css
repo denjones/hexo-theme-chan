@@ -1,0 +1,21 @@
+.post-list {
+  position: relative;
+  padding-left: 0;
+}
+.post-list .post-list-item {
+  padding-left: 20px;
+  margin-bottom: 40px;
+  list-style: none;
+  border-left: 5px solid #d3d3d3;
+}
+.post-list .article-info {
+  font-size: 13px;
+}
+.post-list .article-entry {
+  font-size: 14px;
+}
+@media mq-mobile {
+  .post-list .post-list-item {
+    padding-left: 8px;
+  }
+}

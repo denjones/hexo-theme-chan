@@ -1,0 +1,24 @@
+#ds-waiting {
+  margin: auto !important;
+  margin-top: 50px !important;
+}
+.jiathis_style_32x32 {
+  height: 32px;
+  -webkit-filter: grayscale(60%);
+  -moz-filter: grayscale(60%);
+  -ms-filter: grayscale(60%);
+  -o-filter: grayscale(60%);
+  filter: grayscale(60%);
+  transition-duration: 0.5s;
+  transition-property: filter, -webkit-filter, -moz-filter, -ms-filter, -o-filter;
+}
+.jiathis_style_32x32:hover {
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  -ms-filter: grayscale(0%);
+  -o-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+.jiathis_style > div {
+  border: none !important;
+}

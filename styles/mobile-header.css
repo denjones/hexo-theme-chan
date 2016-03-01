@@ -1,0 +1,47 @@
+.mobile-header {
+  display: none;
+}
+@media mq-mobile {
+  .mobile-header {
+    display: block;
+    height: 45px;
+    color: #fff;
+    text-align: right;
+    background-color: color-default;
+    padding: 5px 10px;
+  }
+  .mobile-header .title {
+    font-size: 32px;
+    line-height: 32px;
+    vertical-align: middle;
+    color: #fff;
+  }
+  .mobile-header .title:hover {
+    color: color-link-sidebar;
+  }
+  .mobile-header .sidebar-toggle {
+    position: relative;
+    float: left;
+    padding: 9px 5px;
+    margin-top: 0px;
+    margin-right: 15px;
+    margin-bottom: 0px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+  }
+  .mobile-header .sidebar-toggle:focus {
+    outline: 0;
+  }
+  .mobile-header .sidebar-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #fff;
+  }
+  .mobile-header .sidebar-toggle .icon-bar+.icon-bar {
+    margin-top: 4px;
+  }
+}

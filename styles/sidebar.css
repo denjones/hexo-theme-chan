@@ -1,0 +1,178 @@
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 400px;
+  height: 100%;
+  overflow: auto;
+  background-color: #333;
+  color: #fff;
+  text-align: right;
+}
+.sidebar .header {
+  padding-right: 30px;
+}
+.sidebar .title {
+  margin-bottom: 0px;
+}
+.sidebar .title a {
+  color: #fff;
+}
+.sidebar .title a:hover {
+  color: color-link-sidebar;
+}
+.sidebar .subtitle {
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+.sidebar .info {
+  display: table;
+  width: 100%;
+}
+.sidebar .info > * {
+  display: table-cell;
+  vertical-align: bottom;
+}
+.sidebar .info .content {
+  padding-left: 10px;
+}
+.sidebar .author {
+  margin-top: 0.5em;
+}
+.sidebar .description {
+  font-size: 14px;
+}
+.sidebar .avatar {
+  width: 140px;
+}
+.sidebar .avatar img {
+  width: 120px;
+  height: 120px;
+  border: 5px solid #d3d3d3;
+  border-radius: 2px;
+}
+.sidebar .nav {
+  padding-left: 0;
+}
+.sidebar .nav > li {
+  list-style: square;
+  margin-left: 0;
+}
+.sidebar .nav > li > a {
+  display: block;
+  padding: 5px 25px;
+  color: color-link-sidebar;
+  border-right: 5px solid transparent;
+}
+.sidebar .nav > li > a:hover {
+  background-color: #808080;
+  color: #fff;
+  border-right: 5px solid #d3d3d3;
+}
+.sidebar .category-list,
+.sidebar .tag-list,
+.sidebar .archive-list {
+  padding-right: 30px;
+  padding-left: 0;
+  display: none;
+}
+.sidebar .category-list.collapsed,
+.sidebar .tag-list.collapsed,
+.sidebar .archive-list.collapsed {
+  height: 0;
+  overflow: hidden;
+}
+.sidebar .category-list .category-list-item,
+.sidebar .tag-list .category-list-item,
+.sidebar .archive-list .category-list-item,
+.sidebar .category-list .tag-list-item,
+.sidebar .tag-list .tag-list-item,
+.sidebar .archive-list .tag-list-item,
+.sidebar .category-list .archive-list-item,
+.sidebar .tag-list .archive-list-item,
+.sidebar .archive-list .archive-list-item {
+  vertical-align: top;
+  display: inline-block;
+  width: 45%;
+  font-size: 13px;
+}
+.sidebar .category-list .category-list-item a,
+.sidebar .tag-list .category-list-item a,
+.sidebar .archive-list .category-list-item a,
+.sidebar .category-list .tag-list-item a,
+.sidebar .tag-list .tag-list-item a,
+.sidebar .archive-list .tag-list-item a,
+.sidebar .category-list .archive-list-item a,
+.sidebar .tag-list .archive-list-item a,
+.sidebar .archive-list .archive-list-item a {
+  width: 80%;
+  display: inline-block;
+  color: #86a87f;
+}
+.sidebar .category-list .category-list-item a:hover,
+.sidebar .tag-list .category-list-item a:hover,
+.sidebar .archive-list .category-list-item a:hover,
+.sidebar .category-list .tag-list-item a:hover,
+.sidebar .tag-list .tag-list-item a:hover,
+.sidebar .archive-list .tag-list-item a:hover,
+.sidebar .category-list .archive-list-item a:hover,
+.sidebar .tag-list .archive-list-item a:hover,
+.sidebar .archive-list .archive-list-item a:hover {
+  color: #fff;
+}
+.sidebar .category-list .category-list-item .tag-list-count,
+.sidebar .tag-list .category-list-item .tag-list-count,
+.sidebar .archive-list .category-list-item .tag-list-count,
+.sidebar .category-list .tag-list-item .tag-list-count,
+.sidebar .tag-list .tag-list-item .tag-list-count,
+.sidebar .archive-list .tag-list-item .tag-list-count,
+.sidebar .category-list .archive-list-item .tag-list-count,
+.sidebar .tag-list .archive-list-item .tag-list-count,
+.sidebar .archive-list .archive-list-item .tag-list-count,
+.sidebar .category-list .category-list-item .category-list-count,
+.sidebar .tag-list .category-list-item .category-list-count,
+.sidebar .archive-list .category-list-item .category-list-count,
+.sidebar .category-list .tag-list-item .category-list-count,
+.sidebar .tag-list .tag-list-item .category-list-count,
+.sidebar .archive-list .tag-list-item .category-list-count,
+.sidebar .category-list .archive-list-item .category-list-count,
+.sidebar .tag-list .archive-list-item .category-list-count,
+.sidebar .archive-list .archive-list-item .category-list-count,
+.sidebar .category-list .category-list-item .archive-list-count,
+.sidebar .tag-list .category-list-item .archive-list-count,
+.sidebar .archive-list .category-list-item .archive-list-count,
+.sidebar .category-list .tag-list-item .archive-list-count,
+.sidebar .tag-list .tag-list-item .archive-list-count,
+.sidebar .archive-list .tag-list-item .archive-list-count,
+.sidebar .category-list .archive-list-item .archive-list-count,
+.sidebar .tag-list .archive-list-item .archive-list-count,
+.sidebar .archive-list .archive-list-item .archive-list-count {
+  display: inline-block;
+  width: 20%;
+  font-size: 12px;
+  color: #838383;
+  vertical-align: top;
+}
+@media mq-mobile {
+  .sidebar {
+    left: -400px;
+    width: 300px;
+    max-width: 100%;
+    z-index: 9999999;
+    transition-duration: 0.3s;
+  }
+  .sidebar.in {
+    left: 0;
+  }
+  .sidebar .header {
+    padding-right: 15px;
+  }
+  .sidebar .title {
+    display: none;
+  }
+  .sidebar .nav > li > a {
+    padding: 5px 10px;
+  }
+}
