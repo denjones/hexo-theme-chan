@@ -1,5 +1,5 @@
 # hexo-theme-chan
-A super simple and elegant theme for [hexo](http://hexo.io). Chan is '禪' in Chinese, which means a lot but presents simply. Less is more. [Preview](http://)
+A super simple and elegant theme for [hexo](http://hexo.io). Chan is '禪' in Chinese, which means a lot but presents simply. Less is more. [Preview](http://denjones.github.io/hexo-theme-chan/archives/)
 
 ## Screenshot
 
