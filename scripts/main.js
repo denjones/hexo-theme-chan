@@ -238,7 +238,6 @@
             item.h = img.naturalHeight;
             gallery.invalidateCurrItems();
             gallery.updateSize(true);
-            console.log(item);
           }
         });
 
