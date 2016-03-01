@@ -22,3 +22,9 @@
 .jiathis_style > div {
   border: none !important;
 }
+.main-content .jiathis_style_32x32 .jtico {
+  display: inline-block !important;
+}
+.jiathis_style .ckepopBottom {
+  padding: 5px;
+}

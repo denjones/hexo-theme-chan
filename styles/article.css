@@ -10,6 +10,7 @@
 .article .article-info {
   font-size: 14px;
   color: #808080;
+  margin-bottom: 1em;
 }
 .article .article-info .article-date {
   margin-right: 0.5em;
@@ -41,6 +42,10 @@
 .article .article-entry {
   font-size: 16px;
   line-height: line-height;
+}
+.article .article-entry code {
+  background-color: #f1f1f1;
+  border-radius: 2px;
 }
 .article .article-entry blockquote {
   background: #f9f9f9;

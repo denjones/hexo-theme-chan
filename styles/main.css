@@ -425,6 +425,7 @@ body {
 .article .article-info {
   font-size: 14px;
   color: #808080;
+  margin-bottom: 1em;
 }
 .article .article-info .article-date {
   margin-right: 0.5em;
@@ -456,6 +457,10 @@ body {
 .article .article-entry {
   font-size: 16px;
   line-height: 1.6em;
+}
+.article .article-entry code {
+  background-color: #f1f1f1;
+  border-radius: 2px;
 }
 .article .article-entry blockquote {
   background: #f9f9f9;
@@ -861,4 +866,10 @@ pre .javascript .function {
 }
 .jiathis_style > div {
   border: none !important;
+}
+.main-content .jiathis_style_32x32 .jtico {
+  display: inline-block !important;
+}
+.jiathis_style .ckepopBottom {
+  padding: 5px;
 }
