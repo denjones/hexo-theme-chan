@@ -15,6 +15,13 @@ git clone https://github.com/denjones/hexo-theme-chan.git themes/chan
 
 And set your theme to `chan` in your site `_config.yml` file.
 
+Before deploying your site, you may need to run `hexo clean` to clean the cache:
+
+``` shell
+hexo clean
+hexo deploy
+```
+
 ## Browser
 Only support the latest browsers. May work in the older ones but never tested.
 
