@@ -212,9 +212,12 @@ body {
   left: 400px;
   bottom: 0;
   height: 100%;
-  padding: 20px 40px;
+  padding: 20px 40px 0;
   overflow: auto;
   word-wrap: break-word;
+}
+.main-footer {
+  padding: 20px 0;
 }
 @media screen and (max-width: 768px) {
   .main-container {
