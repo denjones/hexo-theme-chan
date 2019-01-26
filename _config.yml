@@ -81,3 +81,5 @@ cc: by-sa
 # Check http://photoswipe.com
 fancybox: true    # enable fancybox/photoswipe rendering
 # photoswipe: true  # the same
+
+theme: jekyll-theme-midnight
