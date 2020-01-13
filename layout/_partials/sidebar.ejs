@@ -33,17 +33,17 @@
           <% list.forEach(function(item){ %>
             <% if (item === 'categories') { %>
               <li class="category-list-container">
-                <a href="javascript:;"><%- __('category') %></a>
+                <a href="javascript:;" target="_self"><%- __('category') %></a>
                 <%- list_categories({depth: -1}) %>
               </li>
             <% } else if (item === 'tags') { %>
               <li class="tag-list-container">
-                <a href="javascript:;"><%- __('tag') %></a>
+                <a href="javascript:;" target="_self"><%- __('tag') %></a>
                 <%- list_tags({}) %>
               </li>
             <% } else if (item === 'archives') { %>
               <li class="archive-list-container">
-                <a href="javascript:;"><%- __('archive') %></a>
+                <a href="javascript:;" target="_self"><%- __('archive') %></a>
                 <%- list_archives({type: 'yearly'}) %>
               </li>
             <% } else { %>
